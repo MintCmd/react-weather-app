@@ -64,6 +64,24 @@ function App() {
               {Math.round(weather.main.temp)}℃
             </div>
             <div className="weather">{weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}</div>
+            <div className="weather-details-grid">
+              <div className="weather-detail">
+                <div className="detail-label">Ощущается как</div>
+                <div className="detail-value">{Math.round(weather.main.feels_like)}℃</div>
+              </div>
+              <div className="weather-detail">
+                <div className="detail-label">Влажность</div>
+                <div className="detail-value">{weather.main.humidity}%</div>
+              </div>
+              <div className="weather-detail">
+                <div className="detail-label">Давление</div>
+                <div className="detail-value">{Math.round(weather.main.pressure * 100 / 133.3)} мм рт. ст.</div>
+              </div>
+              <div className="weather-detail">
+                <div className="detail-label">Ветер</div>
+                <div className="detail-value">{weather.wind.speed} м/с</div>
+              </div>
+            </div>
           </div>          
         </div>
         ) : ('')}
