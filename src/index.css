@@ -52,10 +52,6 @@ main {
   transition: 04s ease;
 }
 
-.search-box .search-bar:focus {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
 .location-box  .location {
   color: #FFF;
   font-size: 32px;

@@ -63,7 +63,14 @@ function App() {
             <div className="temp">
               {Math.round(weather.main.temp)}℃
             </div>
-            <div className="weather">{weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}</div>
+            <div className="weather">
+              <img
+                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                alt={weather.weather[0].description}
+                style={{ verticalAlign: 'middle', marginRight: '8px' }}
+              />
+              {weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}
+            </div>
             <div className="weather-details-grid">
               <div className="weather-detail">
                 <div className="detail-label">Ощущается как</div>
